@@ -19,6 +19,8 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
+    - wheel
   run:
     - python
     - about-time ==4.2.1
