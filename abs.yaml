@@ -1,3 +1,2 @@
-channels:
-- https://staging.continuum.io/prefect/fs/about-time-feedstock/pr2/95f4405
-- https://staging.continuum.io/prefect/fs/grapheme-feedstock/pr3/7c07d59
+upload_channels:
+  - sfe1ed40
