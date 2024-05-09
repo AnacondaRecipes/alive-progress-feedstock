@@ -1,5 +1,5 @@
 {% set name = "alive-progress" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.5" %}
 
 
 package:
@@ -12,15 +12,15 @@ source:
 
 build:
   number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  skip: True # [py<37]
 
 requirements:
   host:
     - pip
-    - python >=3.7,<4
+    - python
   run:
-    - python >=3.7,<4
+    - python
     - about-time ==4.2.1
     - grapheme ==0.6.0
 
@@ -34,9 +34,14 @@ test:
 
 about:
   home: https://github.com/rsalmei/alive-progress
-  summary: A new kind of Progress Bar, with real-time throughput, ETA, and very cool animations!
+  summary: A new kind of Progress Bar.
+  description: |
+    A new kind of Progress Bar, with real-time throughput, ETA, and very cool animations!
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  doc_url: https://github.com/rsalmei/alive-progress/blob/main/README.md
+  dev_url: https://github.com/rsalmei/alive-progress
 
 extra:
   recipe-maintainers:
